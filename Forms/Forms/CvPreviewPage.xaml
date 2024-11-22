@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Forms.CvPreviewPage">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+
+        
+            <Label Text="Curriculum Vitae" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" 
+                   Margin="0,20,0,20" />
+
+       
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <StackLayout>
+                    <Label Text="Información personal" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="LightSeaGreen"
+                           Margin="0,10,0,5" />
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10" />
+                    <Label Text="Nombre:" FontSize="18" Margin="0,0,0,5"/>
+                    <Label x:Name="NombreLabel" FontSize="16" Margin="0,0,0,10"/>
+                    <Label Text="Correo Electrónico:" FontSize="18" Margin="0,0,0,5"/>
+                    <Label x:Name="CorreoLabel" FontSize="16" Margin="0,0,0,10"/>
+                    <Label Text="Teléfono:" FontSize="18" Margin="0,0,0,5"/>
+                    <Label x:Name="TelefonoLabel" FontSize="16" Margin="0,0,0,10"/>
+                    <Label Text="Dirección:" FontSize="18" Margin="0,0,0,5"/>
+                    <Label x:Name="DireccionLabel" FontSize="16" Margin="0,0,0,10"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <StackLayout>
+                    <Label Text="Perfil" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="LightSeaGreen"
+                           Margin="0,10,0,5" />
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10" />
+                    <Label x:Name="PerfilLabel" FontSize="16" Margin="0,0,0,10"/>
+                </StackLayout>
+            </Frame>
+
+          
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <StackLayout>
+                    <Label Text="Formación" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="LightSeaGreen"
+                           Margin="0,10,0,5" />
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10" />
+                    <StackLayout x:Name="FormacionLayout"/>
+                </StackLayout>
+            </Frame>
+
+            
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <StackLayout>
+                    <Label Text="Experiencia laboral" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="LightSeaGreen"
+                           Margin="0,10,0,5" />
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10" />
+                    <StackLayout x:Name="ExperienciaLaboralLayout"/>
+                </StackLayout>
+            </Frame>
+
+      
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <StackLayout>
+                    <Label Text="Habilidades" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="LightSeaGreen"
+                           Margin="0,10,0,5" />
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10" />
+                    <StackLayout x:Name="HabilidadesLayout"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

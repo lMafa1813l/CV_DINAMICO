@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Forms"
+             x:Class="Forms.MainPage">
+
+    <StackLayout Padding="20">
+
+        <ScrollView>
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10" BackgroundColor="#F0F0F0">
+                <StackLayout Padding="10">
+
+                    <Label Text="Curriculum Vitae CV" 
+                           FontSize="24" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" 
+                           Margin="0,20,0,20" 
+                           TextColor="#2C3E50"/>
+
+                    <Label Text="Información" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="#16A085"
+                           Margin="0,10" />
+                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                        <Label Text="Nombre:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                        <Entry x:Name="NombreEntry" Placeholder="Ingrese su nombre completo" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                        <Label Text="Correo:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                        <Entry x:Name="CorreoEntry" Placeholder="Ingrese su correo electrónico" Keyboard="Email" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                        <Label Text="Teléfono:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                        <Entry x:Name="TelefonoEntry" Placeholder="Ingrese su teléfono" Keyboard="Telephone" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                        <Label Text="Dirección:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                        <Entry x:Name="DireccionEntry" Placeholder="Ingrese su dirección" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                    </StackLayout>
+
+                    <Label Text="Perfil" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="#16A085"
+                           Margin="0,10" />
+                    <StackLayout>
+                        <Label Text="Escribe un breve párrafo sobre ti:" FontSize="18" TextColor="#16A085"/>
+                        <Editor x:Name="PerfilEditor" Placeholder="Ingrese su perfil" 
+                                AutoSize="TextChanges" 
+                                HeightRequest="100" 
+                                FontSize="16"/>
+                    </StackLayout>
+
+                    <Label Text="Formación" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="#16A085"
+                           Margin="0,10" />
+                    <StackLayout x:Name="SeccionFormacion">
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Grado:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="GradoEntry" Placeholder="Ingrese su grado" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Institución:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="InstitucionEntry" Placeholder="Ingrese su institución" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Año:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="AnoEntry" Placeholder="Ingrese el año de graduación" Keyboard="Numeric" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Button Text="Agregar formación" Clicked="OnAddEducationClicked" BackgroundColor="#2C3E50" TextColor="White" BorderColor="Gray" CornerRadius="5"/>
+
+                    <Label Text="Experiencia laboral" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="#16A085"
+                           Margin="0,10" />
+                    <StackLayout x:Name="SeccionExperienciaLaboral">
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Empresa:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="EmpresaEntry" Placeholder="Ingrese el nombre de la empresa" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Puesto:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="PuestoEntry" Placeholder="Ingrese su puesto" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Años:" WidthRequest="120" FontSize="18" TextColor="#16A085"/>
+                            <Entry x:Name="AnosEntry" Placeholder="Ingrese los años trabajados" HorizontalOptions="FillAndExpand" FontSize="16"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Button Text="Agregar experiencia laboral" Clicked="OnAddWorkExperienceClicked" BackgroundColor="#2C3E50" TextColor="White" BorderColor="Gray" CornerRadius="5"/>
+
+                    <Label Text="Habilidades" 
+                           FontAttributes="Bold" 
+                           FontSize="20" 
+                           TextColor="#16A085"
+                           Margin="0,10" />
+                    <StackLayout x:Name="SeccionHabilidades">
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <CheckBox />
+                            <Label Text="Habilidad 1:" VerticalOptions="Center" FontSize="18" TextColor="#16A085"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Button Text="Agregar habilidad" Clicked="OnAddSkillClicked" BackgroundColor="#2C3E50" TextColor="White" BorderColor="Gray" CornerRadius="5"/>
+
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+
+        <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="20,0,20,20" BackgroundColor="#2C3E50">
+            <Button Text="Enviar" 
+            BackgroundColor="#16A085" 
+            TextColor="White" 
+            FontAttributes="Bold"
+            Margin="0,20,0,0"
+            Clicked="OnSubmitClicked"/>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
+
